@@ -1,6 +1,11 @@
 {
   "name": "hello-rails-react",
   "packageManager": "yarn@3.2.4",
+  "scripts": {
+    "start": "bin/dev",
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch --mode development"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
