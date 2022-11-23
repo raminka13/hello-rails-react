@@ -13,3 +13,67 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: blueviolet;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  height: min-content;
+  width: 40%;
+  flex-wrap: wrap;
+  background-color: antiquewhite;
+  padding: 3rem;
+  border-radius: 2rem;
+  opacity: 96%;
+}
+
+#root h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+}
+
+#root h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  width: 50%;
+}
+
+#root p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: right;
+  width: 50%;
+}
+
+#root h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 1rem 3.5rem;
+  background-color: blueviolet;
+  color: aliceblue;
+}
