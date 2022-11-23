@@ -7,9 +7,11 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
-Greeting.create(quote: Faker::Quote.famous_last_words)
-Greeting.create(quote: Faker::Quote.jack_handey)
-Greeting.create(quote: Faker::Quote.robin)
-Greeting.create(quote: Faker::Quote.matz)
-Greeting.create(quote: Faker::Quote.singular_siegler)
-Greeting.create(quote: Faker::Quote.yoda)
+9.times do
+    Greeting.create(quote: Faker::Quote.famous_last_words, author: "Last Words")
+    Greeting.create(quote: Faker::Quote.jack_handey, author: "Jack Handey")
+    Greeting.create(quote: Faker::Quote.robin, author: "Robin")
+    Greeting.create(quote: Faker::Quote.matz, author: "Matz")
+    Greeting.create(quote: Faker::Quote.singular_siegler, author: "Singular Siegler")
+    Greeting.create(quote: Faker::Quote.yoda, author: "Yoda")
+end

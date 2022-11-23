@@ -4,17 +4,22 @@ import { fetchGreeting } from '../redux/greetings/greetingsSlice';
 
 const Greeting = () => {
   const greetingShow = useSelector((state) => state.greetings.quote);
+  const authorShow = useSelector((state) => state.greetings.author);
   const status = useSelector((state) => state.greetings.status);
   const dispatch = useDispatch();
-  let content;
+  let quote;
+  let author;
   if (status === 'succeeded') {
-    content = greetingShow.quote;
+    quote = greetingShow;
+    author = authorShow;
   }
 
   return (
     <>
       <h1>Random Greeting:</h1>
-      <p>{content}</p>
+      <h3>"{quote}"</h3>
+      <p>by: </p>
+      <h2>{author}</h2>
       <button type="button" onClick={() => dispatch(fetchGreeting())}>
         New Quote
       </button>

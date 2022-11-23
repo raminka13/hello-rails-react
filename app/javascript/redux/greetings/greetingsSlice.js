@@ -23,7 +23,8 @@ export const greetingsSlice = createSlice({
   extraReducers(builder) {
     builder.addCase(fetchGreeting.fulfilled, (state, action) => {
       state.status = 'succeeded';
-      state.quote = action.payload;
+      state.quote = action.payload.quote;
+      state.author = action.payload.author;
     });
   },
 });
